@@ -1,7 +1,7 @@
 const initialState ={
-    title: "Covid-19 Data",
+    title: "Chuck Norris Jokes",
     isFetching: false,
-    data: "",
+    value: "",
     error: ""
 };
 
@@ -17,7 +17,7 @@ export const appReducer = (state = initialState, action) => {
                     ...state,
                     isFetching: false,
                     error:"",
-                    data: action.payload
+                    value: action.payload
                 }
         case "FETCHING_COVID_DATA_ERROR":
             return {

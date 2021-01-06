@@ -7,9 +7,9 @@ const headers = {
 export const fetchData = () => (dispatch) => {
     dispatch({ type: "FETCHING_COVID_DATA" });
 
-    axios.get("https://covid19api.com/", { headers: headers })
+    axios.get("https://api.chucknorris.io/jokes/random", { headers: headers })
         .then(res => {
-            dispatch({ type: "FETCHING_COVID_DATA_SUCCESS", payload: res.data })
+            dispatch({ type: "FETCHING_COVID_DATA_SUCCESS", payload: res.data.value })
             console.log(res);
         })
         .catch(err => {

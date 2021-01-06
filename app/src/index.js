@@ -7,7 +7,7 @@ import thunk from 'redux-thunk';
 import App from './App';
 import { appReducer } from './reducers';
 
-const store = createStore(appReducer, applyMiddleware(logger, thunk));
+const store = createStore(appReducer, applyMiddleware(thunk, logger));
 
 const rootElement = document.getElementById('root');
 

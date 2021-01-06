@@ -1,11 +1,11 @@
 import React from 'react';
-import Health from './components/Health';
+import Data from './components/Data';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Health />
+      <Data />
     </div>
   );
 }

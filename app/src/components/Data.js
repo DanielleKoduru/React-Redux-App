@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { fetchData } from '../actions';
 
-const Health = ({ title, data, isfetching, error, fetchData}) => {
+const Data = ({ title, value, isfetching, error, fetchData}) => {
     useEffect(() => {
         fetchData();
     }, [fetchData]);
@@ -10,8 +10,8 @@ const Health = ({ title, data, isfetching, error, fetchData}) => {
     return (
         <>
         <h1>{title}</h1>
-        <h2>Covid Data: {data}</h2>
-        <button>Get Covid Data</button>
+        <h2>Joke: {value}</h2>
+        <button onClick={fetchData}>Get Chuck Norris Joke</button>
         </>
     );
 };
@@ -19,7 +19,7 @@ const Health = ({ title, data, isfetching, error, fetchData}) => {
 const mapStateToProps = (state) => {
     return {
         title: state.title,
-        data: state.data,
+        value: state.value,
         isFetching: state.isFetching,
         error: state.error
     }
@@ -27,4 +27,4 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = { fetchData };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Health);
+export default connect(mapStateToProps, mapDispatchToProps)(Data);
