@@ -1,0 +1,40 @@
+.App {
+  text-align: center;
+  font-family: sans-serif;
+  padding: 36px;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-image: linear-gradient(#18c7a1, #3b41be);
+  color: white;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  margin: 40px;
+}
+
+button {
+  padding: 6px 8px;
+  font-size: 16px;
+  background: none;
+  color: white;
+  border: 1px solid white;
+  border-radius: 4px;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  background-color: #ffffff22;
+}
